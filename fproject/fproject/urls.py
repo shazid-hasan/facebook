@@ -20,5 +20,6 @@ from fapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Home,name="home")
+    path('',Home,name="home"),
+    path('index/',Index,name="index"),
 ]
