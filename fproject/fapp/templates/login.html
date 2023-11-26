@@ -11,17 +11,19 @@
 <body>
     <div class="container">
         <h1>Facebook</h1>
-        <p>Facebook helps you connect and share<br> with the people in your life.</p>
+        <p>Fuckbook can kill you<br> with the people in your life.</p>
     </div>
 
     <header>
+        <form action="" method="post">
+            {% csrf_token %}
         <div class="box">
-            <input type="email" name="email" id="email" placeholder="Email address or phone number"><br>
+            <input type="text" name="uname" id="text" placeholder="Email address or phone number"><br>
             <input type="password" name="password" id="password" placeholder="Password">
         </div>
 
         <div class="link">
-           <a href="#">Log In</a>
+          <button type="submit" >Log In</button>
         </div>
 
         <div class="link1">
@@ -29,8 +31,9 @@
         </div>
 
         <div class="link2">
-          <a href="#">Create New Account</a>
+          <a href="{% url 'signup' %}">Create New Account</a>
         </div>
+    </form>
     </header>
    
 </body>
